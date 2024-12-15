@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voiceflow Chat Integration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>DEMO SWISSCAVE</h1>
+  <div id="voiceflow-chat"></div>
+
+  <script type="module">
+    import {
+      FormExtension,
+      FeedbackExtension,
+      WaitingAnimationExtension,
+      DoneAnimationExtension,
+      FileUploadExtension,
+      CameraCaptureExtension,
+    } from "./extensions.js";
+
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6745c285fb941ce82899c08a' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          assistant: {
+            stylesheet: 'style.css',
+            extensions: [
+              FeedbackExtension,
+              FormExtension,
+              WaitingAnimationExtension,
+              DoneAnimationExtension,
+              FileUploadExtension,
+              CameraCaptureExtension,
+            ]
+          }
+        });
+      };
+      // Adjust the source to the relative path for local development
+      v.src = "./bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>

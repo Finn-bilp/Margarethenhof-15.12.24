@@ -1,0 +1,13 @@
+footer.vfrc-footer.c-kbCYVp {
+  background-color: black; /* Replace with your desired background color */
+  color: #ffffff; /* Replace with your desired text color */
+  border-top: 2px solid #fff; /* Optional: Add a border if needed */
+  padding: 10px; /* Adjust padding for spacing */
+}
+
+footer.vfrc-footer.c-kbCYVp {
+  background-color: #8a2be2; /* Violett (Hex-Code: Blauviolett) */
+  color: #ffffff; /* Weißer Text */
+  border-top: 2px solid #d8b4ff; /* Optional: Heller violetter Rand oben */
+  padding: 10px; /* Abstand innerhalb des Footers */
+}
